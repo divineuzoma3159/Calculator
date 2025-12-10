@@ -3,18 +3,19 @@ const myInput = document.querySelector('#myInput');
 let express = "";
  button.forEach(init => {
     init.addEventListener('click',() => {
-        express += init.innerHTML
+        express += init.innerHTML;
          myInput.value = express;  
     });
 });
 function clearAll(){
     if(myInput.value){
         myInput.value = "";
-        express = ""
+        express = "";
     }
 }
 function deleteOne(){
-    myInput.value = myInput.value.slice(0,-1)
+    myInput.value = myInput.value.slice(0,-1);
+ express = "";
 }
 function evaluation(){
     try{
@@ -25,4 +26,5 @@ function evaluation(){
         myInput.value = "Error";
         express = "";
     }
+
 }
